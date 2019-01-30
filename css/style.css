@@ -1,0 +1,276 @@
+/* style.css */
+
+/* 기본 세팅 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "맑은 고딕", san-serif;
+  color: #444;
+  font-size: 100%;
+}
+a{
+  text-decoration: none;
+  color: #ccc;
+}
+ul{list-style: none;}
+
+/* 글자색상 */
+.font_white{color: #fff;}
+.font_gray{color: #444;}
+
+/* 기본 레이아웃틀 요소들 */
+header, section, footer, .container{
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+#main_header{
+  width: 1200px;
+  height: 90px;
+  background: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  top: -90px;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+#main_header h1{
+  position: relative;
+  left: 30px;
+  top: 20px;
+}
+
+/* 로그인 메뉴 */
+#user_nav{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+#user_nav li{display: inline-block;}
+#user_nav li a{
+  display: block;
+  padding: 0 10px;
+  font-size: 14px;
+}
+/* 메인 메뉴 */
+#gnb{
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+#gnb li{float: left;}
+#gnb li a{
+  padding: 0 40px;
+}
+#gnb li:last-child a{
+  padding-right: 10px;
+}
+
+/* 메인 비주얼 영역 */
+#content .main_visual{
+  border: 1px solid #f00;
+  width: auto; /* 꽉찬 쪽 */
+  height: 570px;
+  background : url(../images/main-visual1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#content .counsel_menu{
+  position: relative;
+}
+#content .counsel_menu ul{
+  display: flex;
+}
+#content .counsel_menu ul li{
+  flex: 1;  /* 1:1 균등하게 */
+  padding: 40px 20px;
+  text-align: center;
+  border: 1px solid #f00;
+}
+#content .counsel_menu ul li h3{
+  margin-top: 20px;
+}
+#content .counsel_menu ul li i{
+  font-size: 3.2em;
+}
+
+/* 창업문의 */
+#content .counsel_menu ul li.counsel_title{
+  text-align: left;
+  background-image: url("../images/call_help.png");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: right 40px;
+}
+#content .counsel_menu ul li.counsel_title b{
+  font-size: 2.4em;
+  color: #0f0;
+}
+/* 매장찾기 */
+#content .about{
+  display: flex;
+  border: 1px solid #f00;
+  margin-top: 60px;
+}
+#content .about .col2{
+  flex: 1;
+  overflow: hidden;
+}
+#content .about .col2 img{
+  display: block;
+}
+/* 이미지 호버효과 */
+#content .about .col2:hover img{
+  transform: scale(1.2, 1.2);
+}
+#content .about .col2 .img_box{
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+}
+#content .about .col2:first-child{
+  margin-right: 20px;
+}
+
+#content .about .col2 h2{
+  color: #0f0;
+  margin-bottom: 10px;
+}
+#content .about .col2 > .text_box{
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #efefef;
+}
+#content .about .col2 > .text_box > p{
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+/* 더보기 버튼 */
+.btn_more{
+  border: 2px solid #ccc;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+/* why we need? */
+#content .why{
+  width: auto;
+  height: 500px;
+  background: #ccc;
+  background-image: url("../images/why_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 60px;
+}
+#content .why .container{
+  height: 100%;
+}
+#content .why_box{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.8);
+  width: 400px;
+  height: 100%;
+  padding: 4em 20px;
+  color: #fff;
+}
+#content .why_box h1{
+  color: #0f0;
+  margin-bottom: 1em;;
+}
+#content .why_box h2{
+  font-size: 1.8em;
+  margin-bottom: 1.5em;
+}
+#content .why_box p{
+  margin-bottom: 4em;
+  color: #999;
+  font-weight: bold;
+}
+
+/* 브랜드 뉴스 상품 배너 */
+#content .news{
+  display: flex;    
+  margin-top: 60px;
+  border: 1px solid #f00;
+}
+#content .news .col3{
+  flex: 1;
+  border: 1px solid #f00;
+  padding: 20px;
+  margin-right: 20px;
+  padding-top: 2.4em;
+}
+#content .news .col3:last-child{
+  margin-right: 0;
+  padding: 0;
+}
+#content .news .col3:last-child img{
+  display: block;
+}
+#content .news .col3:first-child{
+  background-image: url("../images/nature-green.jpeg");
+  background-size: cover;
+  text-align: center;
+}
+#content .news .col3:first-child h2{
+  color: #fff;
+  font-size: 2.4em;
+  font-family: serif;
+  margin-bottom: 16px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+#content .news .col3:first-child p{
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+#content .news .col3:nth-child(2){
+  background: #005116;
+  color: #fff;
+}
+#content .news .col3:nth-child(2) h2,
+#content .news .col3:nth-child(2) p{
+  margin-bottom: 1em;
+}
+
+
+/* vegas progress 바 수정 */
+.vegas-timer-progress{
+  background: green !important;
+}
+
+/* 페이지 시작시 헤더 애니메이션 효과 */
+#main_header{
+  top: 100px;
+  animation-name: header;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+}
+@keyframes header{
+  /* fadein 되면서 아래로 슬라이드 다운 */
+  from{
+    top: -100px;
+    opacity: 0;
+  }
+    to{
+      top:0;
+      opacity: 1;
+    }
+  }
